@@ -11,7 +11,7 @@ const LoginForm = () => {
   const handleLogin = async (event) => {
     event.preventDefault();
 
-    const response = await fetch("https://localhost:7175/Identity", {
+    const response = await fetch("https://localhost:7175/Identity/login", {
       method: "POST",
       headers: {
         "content-type": "application/json",

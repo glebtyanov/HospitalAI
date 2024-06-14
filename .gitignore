@@ -17,7 +17,7 @@ neural-network/models/
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
-
+ 
 # Mono auto generated files
 mono_crash.*
 
