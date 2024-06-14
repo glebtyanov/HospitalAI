@@ -1,0 +1,54 @@
+<changelist name="Uncommitted_changes_before_rebase_[Changes]" date="1717943146488" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.HospitalAPI/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before rebase [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="AiPredictApi/_pywrap_tensorflow_internal.7z.007" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="AiPredictApi/_pywrap_tensorflow_internal.7z.001" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="AiPredictApi/_pywrap_tensorflow_internal.7z.004" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="AiPredictApi/_pywrap_tensorflow_internal.7z.005" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="AiPredictApi/_pywrap_tensorflow_internal.7z.008" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="AiPredictApi/resnet_transfer_scol.keras" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.HospitalAPI/.idea/shelf/Uncommitted_changes_before_rebase_[Changes]/resnet_transfer_scol.keras" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="AiPredictApi/_pywrap_tensorflow_internal.7z.002" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="AiPredictApi/_pywrap_tensorflow_internal.7z.009" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="AiPredictApi/_pywrap_tensorflow_internal.7z.003" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="AiPredictApi/_pywrap_tensorflow_internal.7z.006" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+</changelist>
