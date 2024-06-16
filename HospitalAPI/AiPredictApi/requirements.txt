@@ -3,3 +3,5 @@ numpy==1.26.4
 opencv_python==4.10.0.82
 tensorflow==2.16.1
 tensorflow_intel==2.16.1
+setuptools==69.1.1
+wheel==0.43.0

@@ -98,6 +98,8 @@ namespace HospitalAPI
                 config.CreateMap<DiseaseGetDto, Disease>().ReverseMap();
             });
 
+            builder.Services.AddHostedService<PythonProcessHostedService>();
+            
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -126,31 +128,6 @@ namespace HospitalAPI
             {
                 Directory.CreateDirectory(uploadsDir);
             }
-
-            Console.WriteLine("Installing python deps");
-            var installDependenciesStartInfo = new ProcessStartInfo
-            {
-                FileName = "pip",
-                Arguments = "install -r ./AiPredictApi/requirements.txt",
-                UseShellExecute = false,
-                CreateNoWindow = true
-            };
-
-            var installDependenciesProcess = new Process { StartInfo = installDependenciesStartInfo };
-            installDependenciesProcess.Start();
-            installDependenciesProcess.WaitForExit();
-
-            Console.WriteLine("Deps installed. Starting script");
-            var startInfo = new ProcessStartInfo
-            {
-                FileName = "python",
-                Arguments = "./AiPredictApi/predict_api.py",
-                UseShellExecute = false,
-                CreateNoWindow = true
-            };
-
-            var process = new Process { StartInfo = startInfo };
-            process.Start();
             
             app.Run();
         }
