@@ -1,4 +1,4 @@
-namespace HospitalAPI.Dto.Employee
+namespace HospitalAPI.Dto.Disease
 {
 	public class DiseaseAddDto
 	{

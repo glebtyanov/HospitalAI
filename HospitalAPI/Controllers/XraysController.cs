@@ -43,20 +43,28 @@ namespace HospitalAPI.Controllers
 			return Ok(mapper.Map<XrayGetDto>(xray));
 		}
 
-		[HttpPut]
-		public async Task<IActionResult> Update(XrayAddDto xrayUpdate)
+		[HttpPut("{id}")]
+		public async Task<IActionResult> Update(XrayAddDto xrayUpdate, int id)
 		{
-			var xray = mapper.Map<Xray>(xrayUpdate);
+            var patient = await context.Xrays.FindAsync(id);
 
-			var validationResult = await _validator.ValidateAsync(xray);
+            if (patient is null)
+            {
+                return NotFound();
+            }
+            
+            patient = mapper.Map<Xray>(xrayUpdate);
+            patient.XrayId = id;
+            
+            var validationResult = await _validator.ValidateAsync(patient);
 
-			if (!validationResult.IsValid)
-				return BadRequest(validationResult);
+            if (!validationResult.IsValid)
+                return BadRequest(validationResult);
 
-			context.Update(xray);
-			await context.SaveChangesAsync();
+            context.Update(patient);
+            await context.SaveChangesAsync();
 
-			return Ok(mapper.Map<XrayGetDto>(xray));
+            return Ok(mapper.Map<XrayGetDto>(patient));
 		}
 
 		[HttpDelete]

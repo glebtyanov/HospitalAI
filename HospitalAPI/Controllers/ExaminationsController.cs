@@ -44,10 +44,18 @@ namespace HospitalAPI.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(ExaminationAddDto examinationUpdate)
+        public async Task<IActionResult> Update(ExaminationAddDto examinationUpdate, int id)
         {
-            var examination = mapper.Map<Examination>(examinationUpdate);
+            var examination = await context.Examinations.FindAsync(id);
 
+            if (examination is null)
+            {
+                return NotFound();
+            }
+            
+            examination = mapper.Map<Examination>(examinationUpdate);
+            examination.ExaminationId = id;
+            
             var validationResult = await _validator.ValidateAsync(examination);
 
             if (!validationResult.IsValid)

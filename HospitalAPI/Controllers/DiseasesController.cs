@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Http.HttpResults;
+
 namespace HospitalAPI.Controllers
 {
     [Route("[controller]")]
@@ -43,11 +45,19 @@ namespace HospitalAPI.Controllers
 			return Ok(mapper.Map<DiseaseGetDto>(disease));
 		}
 
-		[HttpPut]
-		public async Task<IActionResult> Update(DiseaseAddDto diseaseUpdate)
-		{
-			var disease = mapper.Map<Disease>(diseaseUpdate);
+		[HttpPut("{id}")]
+		public async Task<IActionResult> Update(DiseaseAddDto diseaseUpdate, int id)
+        {
+            var disease = await context.Diseases.FindAsync(id);
 
+            if (disease is null)
+            {
+                return NotFound();
+            }
+            
+            disease = mapper.Map<Disease>(diseaseUpdate);
+            disease.DiseaseId = id;
+            
 			var validationResult = await _validator.ValidateAsync(disease);
 
 			if (!validationResult.IsValid)

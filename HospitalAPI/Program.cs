@@ -1,6 +1,4 @@
 using System.Diagnostics;
-using HospitalApi;
-using HospitalAPI.Dto.Employee;
 using HospitalAPI.Dto.Examination;
 using HospitalAPI.Models;
 
@@ -102,6 +100,8 @@ namespace HospitalAPI
             
             var app = builder.Build();
 
+            app.MigrateDatabase<HospitalDbContext>();
+            
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {

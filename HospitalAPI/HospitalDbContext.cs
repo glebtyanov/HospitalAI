@@ -1,5 +1,5 @@
 // ReSharper disable PropertyCanBeMadeInitOnly.Global
-namespace HospitalApi
+namespace HospitalAPI
 {
 	public class HospitalDbContext(DbContextOptions<HospitalDbContext> options) : DbContext(options)
     {

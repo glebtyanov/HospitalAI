@@ -9,14 +9,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a7273c4-4d40-4ba8-ac41-4477a869c959" name="Changes" comment="migrated">
-      <change afterPath="$PROJECT_DIR$/PythonProcessHostedService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/N23,N,F,29_1_0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/N27,N,F,22_1_0.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/N6,N,F,15_1_0.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HospitalAPI/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HospitalAPI/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DbContextExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.HospitalAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HospitalAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AiPredictApi/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/AiPredictApi/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/DiseasesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/DiseasesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/DoctorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/DoctorController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/ExaminationsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ExaminationsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/PatientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/PatientsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/XraysController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/XraysController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dto/Disease/DiseaseAddDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/Disease/DiseaseAddDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HospitalAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HospitalAPI.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HospitalDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HospitalDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20240501202808_Initial.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20240501202808_Initial.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20240609143527_PatientDoctorChanges.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20240609143527_PatientDoctorChanges.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20240616072340_AddNewProperties.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/20240616072340_AddNewProperties.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Migrations/HospitalDbContextModelSnapshot.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/usings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/usings.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,6 +195,7 @@
       <workItem from="1718550792299" duration="516000" />
       <workItem from="1718551607080" duration="1113000" />
       <workItem from="1718559658823" duration="878000" />
+      <workItem from="1718564183127" duration="1645000" />
     </task>
     <task id="LOCAL-00001" summary="inital before migrations">
       <option name="closed" value="true" />
@@ -271,7 +283,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Controllers/PatientsController.cs</url>
-          <line>42</line>
+          <line>41</line>
           <properties documentPath="C:\Users\SystemX\Desktop\unik\diplom\HospitalAPI\Controllers\PatientsController.cs" initialLine="42" containingFunctionPresentation="Method 'Create'">
             <startOffsets>
               <option value="1184" />
@@ -284,7 +296,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Controllers/PatientsController.cs</url>
-          <line>43</line>
+          <line>42</line>
           <properties documentPath="C:\Users\SystemX\Desktop\unik\diplom\HospitalAPI\Controllers\PatientsController.cs" initialLine="43" containingFunctionPresentation="Method 'Create'">
             <startOffsets>
               <option value="1229" />
@@ -294,6 +306,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/DiseasesController.cs</url>
+          <line>57</line>
+          <properties documentPath="C:\Users\SystemX\Desktop\unik\HospitalAI\HospitalAPI\Controllers\DiseasesController.cs" initialLine="57" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="1470" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1515" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/DiseasesController.cs</url>
+          <line>60</line>
+          <properties documentPath="C:\Users\SystemX\Desktop\unik\HospitalAI\HospitalAPI\Controllers\DiseasesController.cs" initialLine="59" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="1568" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1631" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

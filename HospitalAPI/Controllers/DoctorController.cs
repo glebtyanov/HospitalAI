@@ -44,19 +44,27 @@ namespace HospitalAPI.Controllers
 		}
 
 		[HttpPut]
-		public async Task<IActionResult> Update(DoctorAddDto doctorUpdate)
+		public async Task<IActionResult> Update(DoctorAddDto doctorUpdate, int id)
 		{
-			var doctor = mapper.Map<Doctor>(doctorUpdate);
+            var doctor = await context.Doctors.FindAsync(id);
 
-			var validationResult = await _validator.ValidateAsync(doctor);
+            if (doctor is null)
+            {
+                return NotFound();
+            }
+            
+            doctor = mapper.Map<Doctor>(doctorUpdate);
+            doctor.DoctorId = id;
+            
+            var validationResult = await _validator.ValidateAsync(doctor);
 
-			if (!validationResult.IsValid)
-				return BadRequest(validationResult);
+            if (!validationResult.IsValid)
+                return BadRequest(validationResult);
 
-			context.Update(doctor);
-			await context.SaveChangesAsync();
+            context.Update(doctor);
+            await context.SaveChangesAsync();
 
-			return Ok(mapper.Map<DoctorGetDto>(doctor));
+            return Ok(mapper.Map<DoctorGetDto>(doctor));
 		}
 
 		[HttpDelete]
