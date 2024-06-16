@@ -28,7 +28,6 @@ namespace HospitalAPI.Controllers
         }
 
 		[HttpPost]
-        [Authorize(Policy = "AdminOnly")]
 		public async Task<IActionResult> Create(DoctorAddDto doctorAdd)
 		{
 			var doctor = mapper.Map<Doctor>(doctorAdd);

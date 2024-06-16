@@ -5,15 +5,20 @@ namespace HospitalAPI.Controllers
     public class IdentityController(HospitalDbContext context, IConfiguration config) : ControllerBase
     {
         [HttpPost("login")]
-        public async Task<string> LoginAsync(LoginDto loginDto)
+        public async Task<IActionResult> LoginAsync(LoginDto loginDto)
         {
             var doctor = await context.Doctors
                 .Where(e => e.Login == loginDto.Login && e.Password == loginDto.Password)
                 .FirstOrDefaultAsync();
-
+            
+            if (doctor is null)
+            {
+                return NotFound("Object with given id was not found");
+            }
+            
             var token = GenerateJsonWebToken(doctor!);
-
-            return token;
+            
+            return Ok(new IdentityResult(token, doctor.DoctorId, doctor.IsAdmin));
         }
 
         private string GenerateJsonWebToken(Doctor doctor)
@@ -54,5 +59,7 @@ namespace HospitalAPI.Controllers
 
             return tokenHandler.WriteToken(token);
         }
+
+        private record IdentityResult(string Token, int DoctorId, bool IsAdmin);
     }
 }
