@@ -4,7 +4,6 @@ namespace HospitalAPI.Controllers
 {
     [Route("[controller]")]
     [ApiController]
-    [Authorize()]
     public class PatientsController(HospitalDbContext context, IMapper mapper) : ControllerBase
     {
         private readonly PatientValidator _validator = new();
