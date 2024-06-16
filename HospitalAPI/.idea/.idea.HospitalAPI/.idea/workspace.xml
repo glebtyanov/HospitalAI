@@ -9,25 +9,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a7273c4-4d40-4ba8-ac41-4477a869c959" name="Changes" comment="migrated">
-      <change afterPath="$PROJECT_DIR$/DbContextExtensions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.HospitalAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.HospitalAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/DiseasesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/DiseasesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/DoctorController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/DoctorController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/ExaminationsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/ExaminationsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/PatientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/PatientsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/XraysController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/XraysController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dto/Disease/DiseaseAddDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/Disease/DiseaseAddDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/20240501202808_Initial.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/20240501202808_Initial.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/20240609143527_PatientDoctorChanges.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/20240609143527_PatientDoctorChanges.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/20240616072340_AddNewProperties.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/20240616072340_AddNewProperties.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/20240616192711_AddIdentity.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/20240616192711_AddIdentity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Migrations/HospitalDbContextModelSnapshot.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HospitalAPI.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/HospitalAPI.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HospitalDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/HospitalDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20240501202808_Initial.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20240501202808_Initial.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20240609143527_PatientDoctorChanges.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20240609143527_PatientDoctorChanges.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20240616072340_AddNewProperties.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/20240616072340_AddNewProperties.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Migrations/HospitalDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/usings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/usings.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +186,7 @@
       <workItem from="1718550792299" duration="516000" />
       <workItem from="1718551607080" duration="1113000" />
       <workItem from="1718559658823" duration="878000" />
-      <workItem from="1718564183127" duration="1645000" />
+      <workItem from="1718564183127" duration="1966000" />
     </task>
     <task id="LOCAL-00001" summary="inital before migrations">
       <option name="closed" value="true" />

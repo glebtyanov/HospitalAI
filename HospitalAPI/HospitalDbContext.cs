@@ -25,7 +25,8 @@ namespace HospitalAPI
             modelBuilder.Entity<Examination>(builder =>
             {
                 builder.HasKey(e => e.ExaminationId);
-				builder.Property(e => e.ExaminationId).ValueGeneratedOnAdd();
+				builder.Property(e => e.ExaminationId)
+                    .ValueGeneratedOnAdd();
 
                 builder.Property(e => e.Conclusion)
                     .IsRequired()
