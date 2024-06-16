@@ -1,22 +1,21 @@
 import styled from "styled-components";
 
-// Создание стилей для карточки человека
 export const PersonCardWrapper = styled.div`
   margin: 50px auto;
-  background-color: rgb(39, 83, 70); /* цвет фона карточки */
-  background-color: #c1ba9f; /* цвет фона карточки */
-  color: white; /* цвет текста */
+  background-color: rgb(39, 83, 70);
+  background-color: #c1ba9f;
+  color: white;
   width: 500px;
   height: 220px;
   padding: 50px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* тень */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 export const Avatar = styled.img`
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* чтобы сделать изображение круглым */
+  border-radius: 50%;
 `;
 
 export const PersonInfo = styled.div`

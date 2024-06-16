@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
@@ -10,5 +9,9 @@ export const GlobalStyle = createGlobalStyle`
     background-color: rgb(47, 161, 127);
     color: rgb(255, 255, 255);
     box-sizing: border-box;
+  };
+
+  body::-webkit-scrollbar {
+  display: none;
   }
 `;

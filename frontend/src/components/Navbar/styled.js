@@ -96,23 +96,22 @@ export const ToggleInput = styled.input`
 export const ExitButton = styled.button`
   width: 120px;
   height: 40px;
-  border-radius: 20px; /* половина высоты */
-  background-color: rgb(39, 83, 70); /* цвет кнопки */
-  color: #ffffff; /* цвет текста */
+  border-radius: 20px;
+  background-color: rgb(39, 83, 70);
+  color: #ffffff;
   font-size: 16px;
   font-weight: bold;
   text-align: center;
-  line-height: 40px; /* для центрирования текста */
-  // text-transform: uppercase; /* для приведения текста к верхнему регистру */
+  line-height: 40px;
+  // text-transform: uppercase;
   cursor: pointer;
-  border: none; /* удалить границу */
-
+  border: none; 
     &:hover {
       background-color: rgb(47, 150, 127);
     }
 
     &:focus {
-      outline: none; /* удалить рамку фокуса */
+      outline: none;
     }
 
   }

@@ -39,7 +39,7 @@ const PatientInfo = ({ searchQuery }) => {
           <Avatar src={user} alt="user" />
           <PersonInfo>
             <Name>ФИО: {patient.fullName}</Name>
-            <Name>Дата рождения: 28.03.1993</Name>
+            <Name>Дата рождения: {patient.birthDate}</Name>
             <Position>Диагноз: Сколеоз 1-й степени</Position>
             <Company>Место работы: ОАО "Моготекс"</Company>
           </PersonInfo>

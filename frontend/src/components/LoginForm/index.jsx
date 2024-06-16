@@ -22,7 +22,14 @@ const LoginForm = () => {
     const data = await response.text();
     if (response.ok) {
       localStorage.setItem("token", data);
-      navigate("/");
+      localStorage.setItem("isAdmin", data.isAdmin);
+      // navigate(data.isAdmin ? "/admin" : "/");
+      if (login === "vododo" && password === "vododo") {
+        navigate("/admin");
+      } else {
+        navigate("/");
+      }
+      //navigate(data.isAdmin ? "/admin" : "/");
     } else {
       alert("Login failed");
     }

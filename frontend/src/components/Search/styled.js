@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SearchWrapper = styled.div`
-  background-color: rgb(39, 83, 70);
+  background-color: rgb(193, 186, 159);
   color: rgb(47, 161, 127);
   width: 500px;
   padding: 20px;
