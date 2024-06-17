@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import diagram from "@assets/images/diagram.svg";
-import { footerItems } from "@constants";
+// import { footerItems } from "@constants";
 
 import {
   FooterContainer,

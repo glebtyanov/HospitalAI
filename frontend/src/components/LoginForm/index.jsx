@@ -19,17 +19,13 @@ const LoginForm = () => {
       body: JSON.stringify({ login, password }),
     });
 
-    const data = await response.text();
+    const data = await response.json();
     if (response.ok) {
-      localStorage.setItem("token", data);
+      localStorage.setItem("token", data.token);
       localStorage.setItem("isAdmin", data.isAdmin);
-      // navigate(data.isAdmin ? "/admin" : "/");
-      if (login === "vododo" && password === "vododo") {
-        navigate("/admin");
-      } else {
-        navigate("/");
-      }
-      //navigate(data.isAdmin ? "/admin" : "/");
+      localStorage.setItem("doctorId", data.doctorId);
+
+      navigate(data.isAdmin ? "/admin" : "/");
     } else {
       alert("Login failed");
     }

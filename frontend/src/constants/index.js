@@ -5,11 +5,7 @@ export const navbarItems = [
 ];
 
 export const headerData = {
-  name: "Автоматизированная",
-  subname: "система Лекарь",
+  name: "Диагностика",
+  subname: "заболеваний позвоночника",
   quote: "Предоставляем комплексные рентген услуги.",
-};
-
-export const footerItems = {
-  copyright: "АСОИ Лекарь © 2023-2024, Все права защищены",
 };
