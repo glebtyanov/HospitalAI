@@ -191,20 +191,22 @@ const DoctorTable = () => {
               <TableCell>
                 {editingDoctor?.doctorId === doctor.doctorId ? (
                   <Button onClick={() => handleUpdate(doctor.doctorId)}>
-                    Save
+                    Сохранить
                   </Button>
                 ) : (
-                  <Button onClick={() => setEditingDoctor(doctor)}>Edit</Button>
+                  <Button onClick={() => setEditingDoctor(doctor)}>
+                    Изменить
+                  </Button>
                 )}
                 <Button onClick={() => handleDelete(doctor.doctorId)}>
-                  Delete
+                  Удалить
                 </Button>
               </TableCell>
             </tr>
           ))}
         </tbody>
       </Table>
-      <h3>Create new Doctor</h3>
+      <h3>Добавить запись</h3>
       <Input
         placeholder="Full Name"
         value={newDoctor.fullName}
@@ -248,7 +250,7 @@ const DoctorTable = () => {
           }
         />
       </label>
-      <Button onClick={handleCreate}>Create</Button>
+      <Button onClick={handleCreate}>Создать</Button>
     </TableContainer>
   );
 };

@@ -118,20 +118,20 @@ const XraysTable = () => {
               <TableCell>
                 {editingXray?.xrayId === xray.xrayId ? (
                   <Button onClick={() => handleUpdate(xray.xrayId)}>
-                    Save
+                    Сохранить
                   </Button>
                 ) : (
-                  <Button onClick={() => setEditingXray(xray)}>Edit</Button>
+                  <Button onClick={() => setEditingXray(xray)}>Изменить</Button>
                 )}
                 <Button onClick={() => handleDelete(xray.xrayId)}>
-                  Delete
+                  Удалить
                 </Button>
               </TableCell>
             </tr>
           ))}
         </tbody>
       </Table>
-      <h3>Create new Xray</h3>
+      <h3>Добавить запись</h3>
       <Input
         placeholder="Xray Code"
         value={newXray.xrayCode}
@@ -144,7 +144,7 @@ const XraysTable = () => {
           setNewXray({ ...newXray, xrayFileIndex: e.target.value })
         }
       />
-      <Button onClick={handleCreate}>Create</Button>
+      <Button onClick={handleCreate}>Создать</Button>
     </TableContainer>
   );
 };

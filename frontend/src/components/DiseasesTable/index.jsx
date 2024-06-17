@@ -96,22 +96,22 @@ const DiseasesTable = () => {
               <TableCell>
                 {editingDisease?.diseaseId === disease.diseaseId ? (
                   <Button onClick={() => handleUpdate(disease.diseaseId)}>
-                    Save
+                    Сохранить
                   </Button>
                 ) : (
                   <Button onClick={() => setEditingDisease(disease)}>
-                    Edit
+                    Изменить
                   </Button>
                 )}
                 <Button onClick={() => handleDelete(disease.diseaseId)}>
-                  Delete
+                  Удалить
                 </Button>
               </TableCell>
             </tr>
           ))}
         </tbody>
       </Table>
-      <h3>Create new Disease</h3>
+      <h3>Добавить запись</h3>
       <Input
         placeholder="Class"
         value={newDisease.class}
@@ -124,7 +124,7 @@ const DiseasesTable = () => {
         value={newDisease.name}
         onChange={(e) => setNewDisease({ ...newDisease, name: e.target.value })}
       />
-      <Button onClick={handleCreate}>Create</Button>
+      <Button onClick={handleCreate}>Создать</Button>
     </TableContainer>
   );
 };

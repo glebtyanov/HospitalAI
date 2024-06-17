@@ -77,7 +77,7 @@ const ExaminationTable = () => {
 
   return (
     <TableContainer>
-      <h2>Examinations</h2>
+      <h2>Таблица Examinations</h2>
       <Table>
         <thead>
           <tr>
@@ -180,22 +180,22 @@ const ExaminationTable = () => {
                   <Button
                     onClick={() => handleUpdate(examination.examinationId)}
                   >
-                    Save
+                    Сохранить
                   </Button>
                 ) : (
                   <Button onClick={() => setEditingExamination(examination)}>
-                    Edit
+                    Изменить
                   </Button>
                 )}
                 <Button onClick={() => handleDelete(examination.examinationId)}>
-                  Delete
+                  Удалить
                 </Button>
               </TableCell>
             </tr>
           ))}
         </tbody>
       </Table>
-      <h3>Create new Examination</h3>
+      <h3>Создать запись</h3>
       <Input
         placeholder="Patient ID"
         value={newExamination.patientId}
@@ -234,7 +234,7 @@ const ExaminationTable = () => {
           })
         }
       />
-      <Button onClick={handleCreate}>Create</Button>
+      <Button onClick={handleCreate}>Создать</Button>
     </TableContainer>
   );
 };

@@ -16,8 +16,8 @@ const DoctorInfo = () => {
     <PersonCardWrapper>
       <Avatar src={doctor} alt="doctor" />
       <PersonInfo>
-        <Name>ФИО: Иванов Иван Иванович</Name>
-        <Position>Должность: Врач-ортопед</Position>
+        <Name>ФИО: Кутаев Антон Игоревич</Name>
+        <Position>Должность: Врач-травмотолог</Position>
         <Company>
           Место работы: Могилёвская областная клиническая больница
         </Company>

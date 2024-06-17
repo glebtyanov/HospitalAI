@@ -136,22 +136,22 @@ const PatientsTable = () => {
               <TableCell>
                 {editingPatient?.patientId === patient.patientId ? (
                   <Button onClick={() => handleUpdate(patient.patientId)}>
-                    Save
+                    Сохранить
                   </Button>
                 ) : (
                   <Button onClick={() => setEditingPatient(patient)}>
-                    Edit
+                    Изменить
                   </Button>
                 )}
                 <Button onClick={() => handleDelete(patient.patientId)}>
-                  Delete
+                  Удалить
                 </Button>
               </TableCell>
             </tr>
           ))}
         </tbody>
       </Table>
-      <h3>Create new Patient</h3>
+      <h3>Добавить запись</h3>
       <Input
         placeholder="Full Name"
         value={newPatient.fullName}
@@ -173,7 +173,7 @@ const PatientsTable = () => {
           setNewPatient({ ...newPatient, workPlace: e.target.value })
         }
       />
-      <Button onClick={handleCreate}>Create</Button>
+      <Button onClick={handleCreate}>Создать</Button>
     </TableContainer>
   );
 };

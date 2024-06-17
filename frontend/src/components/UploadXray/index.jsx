@@ -1,50 +1,66 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useState } from "react";
 
-// Создание стилей для компонента формы загрузки фотографии
-const UploadFormWrapper = styled.div`
-  background-color: rgb(39, 83, 70); /* цвет фона */
-  color: rgb(47, 161, 127); /* цвет текста */
-  width: 100%;
-  height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-`;
+import {
+  UploadFormWrapper,
+  UploadFormContainer,
+  UploadInput,
+  UploadButton,
+} from "./styled";
 
-const UploadFormContainer = styled.div`
-  width: 500px;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* тень */
-  color: white;
-`;
-
-const UploadInput = styled.input`
-  width: 100%;
-  margin-bottom: 20px;
-`;
-
-const UploadButton = styled.button`
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 5px;
-  background-color: rgb(47, 161, 127);
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-`;
-
-// Создание компонента формы загрузки фотографии
 const UploadXray = () => {
+  const [file, setFile] = useState(null);
+  const [result, setResult] = useState(null);
+  const [error, setError] = useState(null);
+
+  const handleFileChange = (e) => {
+    setFile(e.target.files[0]);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError(null);
+    setResult(null);
+
+    if (!file) {
+      setError("Please select a file.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("image", file);
+
+    try {
+      const response = await fetch("https://localhost:7175/Ai/predict/", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const data = await response.json();
+      setResult(data);
+    } catch (error) {
+      setError(`Error: ${error.message}`);
+    }
+  };
+
   return (
     <UploadFormWrapper>
-      <UploadFormContainer>
+      <UploadFormContainer onSubmit={handleSubmit}>
         <h2>Загрузить фотографию</h2>
-        <UploadInput type="file" accept="image/*" />
-        <UploadButton>Загрузить</UploadButton>
+        <UploadInput type="file" onChange={handleFileChange} />
+        <UploadButton type="submit">Загрузить</UploadButton>
       </UploadFormContainer>
+      {result && (
+        <div>
+          <h2>Prediction Result</h2>
+          <p>Prediction: {result.prediction}</p>
+          <p>Confidence: {result.confidence}%</p>
+        </div>
+      )}
+      {error && <p style={{ color: "red", margin: "10px" }}>{error}</p>}
     </UploadFormWrapper>
   );
 };
