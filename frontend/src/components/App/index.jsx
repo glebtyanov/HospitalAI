@@ -1,7 +1,6 @@
-import { useState } from "react";
-import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { Navbar, Header, Footer, ProtectedRoute } from "@components";
+import { ProtectedRoute } from "@components";
 import { Doctor, Patient, XrayAnalysis, Login, Admin } from "@pages";
 
 import { GlobalStyle } from "./styled";
@@ -46,7 +45,6 @@ const App = () => {
             }
           />
         </Routes>
-        {/* <Footer /> */}
       </BrowserRouter>
     </>
   );
